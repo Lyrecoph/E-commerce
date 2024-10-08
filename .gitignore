@@ -1,0 +1,61 @@
+# Les fichiers Python compilés
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+
+# Les fichiers d'environnement virtuel
+env/
+venv/
+ENV/
+ENV*/
+.vscode/
+
+# Les fichiers de configuration IDE (Visual Studio Code, PyCharm, etc.)
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Les fichiers de base de données locales SQLite
+*.sqlite3
+*.db
+
+# Fichiers de migration générés par Django
+*/migrations/*.py
+*/migrations/*.pyc
+*/migrations/*/ 
+
+# Clés et certificats de développement locaux
+*.pem
+
+# Paramètres locaux, comme ceux utilisés par dotenv ou Django-environ
+.env
+*.env
+
+# Les fichiers statiques compilés (CSS, JavaScript, etc.)
+staticfiles/
+static/
+media/
+
+# Les fichiers de logs
+*.log
+
+# Les fichiers générés par le cache
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Fichiers de couverture de tests
+htmlcov/
+.coverage
+*.cover
+.hypothesis/
+
+# Fichiers de Docker
+docker-compose*.yml
+Dockerfile
+
+# Pytest
+.pytest_cache/
