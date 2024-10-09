@@ -21,9 +21,25 @@ class Product(models.Model):
     name = models.CharField(max_length=200)
     price = models.FloatField()
     digital = models.BooleanField(default=False, null=True, blank=False)
+    image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
         return self.name
+    
+    """"@property : est un decorator Python qui transforme la méthode 
+        en propriété accessible sans parenthèses, comme si 
+        c'était un attribut du modèle
+    """
+    
+    # facilite la gestion des images des produits, en gérant les cas
+    # où une image n'est pas présente.
+    @property
+    def imageURL(self):
+        try:
+            url = self.image.url
+        except:
+            url = ''
+        return url
     
 # Table commande
 class Order(models.Model):

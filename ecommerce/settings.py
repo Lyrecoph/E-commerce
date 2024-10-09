@@ -134,3 +134,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
+
+
+# Cela définira la racine du média pour qu'elle commence tjrs à "images/image_name"
+MEDIA_URL = '/images/'
+
+# La racine du média définira un chémin pour tous fichiers multimédias à télécharger
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')

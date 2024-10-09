@@ -1,9 +1,13 @@
 from django.shortcuts import render
 
+from store.models import *
+
 # Create your views here.
 
 def store(request):
-    context = {}
+    # récupèrer dans un queryset l'ensemble des produits
+    products = Product.objects.all()
+    context = {'products': products}
     return render(request, 'store/store.html', context)
 
 
